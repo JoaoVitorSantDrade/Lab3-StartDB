@@ -53,8 +53,8 @@ describe('testando a implementacao do cofrinho (Questão 2)', () => {
 
     test('Serializando cofrinho para Json', () => {
         cofre.adicionar(centavos20);
-        let s:string = JSON.stringify(cofre.toJson())
-        expect(true).toBe(true);
+        let expectedString:string = "{\"moedas\":[{\"valor\":0.2,\"nome\":\"20 Centavos\"}],\"total\":0.2}";
+        expect(JSON.stringify(cofre.toJson())).toEqual(expectedString);
     })
 
     
